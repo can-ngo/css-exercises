@@ -9,6 +9,10 @@ html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 3fr; /* The grid has two columns, The second column is three times larger than the first */
+  grid-template-rows: 1fr 1fr 5fr 1fr; /* The grid has four rows, The third row is five times larger than the others */
 }
 
 .container div {
@@ -22,10 +26,14 @@ html {
 
 .header {
   background-color: #006157;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
 }
 
 .sidebar {
   background-color: #005B94;
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
 }
 
 .nav {
@@ -38,6 +46,8 @@ html {
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
 }
 
 .article p {
